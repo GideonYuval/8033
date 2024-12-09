@@ -33,7 +33,7 @@ namespace _8033
     {
         public Lion()
         {
-            this.food = 2 * base.food; // Lions eat twice as much as a generic animal
+            this.food *=2; // Lions eat twice as much as a generic animal
         }
 
         // Override IsHungry
@@ -64,7 +64,7 @@ namespace _8033
     {
         public Panda()
         {
-            this.food = base.food + 1; // Pandas eat 1 kilo more than a generic animal
+            this.food++; // Pandas eat 1 kilo more than a generic animal
         }
 
         // Override IsHungry
