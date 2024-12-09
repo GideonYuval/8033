@@ -139,17 +139,16 @@ namespace _8033
         // Return an array of all hungry lions in the zoo
         public Lion[] GetHungryLions()
         {
-            Lion[] hungryLions = new Lion[100]; // Fixed size array as per question
+            Lion[] hungryLions = new Lion[100]; 
             int index = 0;
 
             foreach (Cage cage in cages)
             {
                 foreach (Animal animal in cage.GetAnimals())
                 {
-                    // Use downcasting to check and cast to Lion
                     if (animal is Lion)
                     {
-                        Lion lion = (Lion)animal; // Explicit cast
+                        Lion lion = (Lion)animal; 
                         if (lion.IsHungry())
                         {
                             hungryLions[index++] = lion;
@@ -158,7 +157,7 @@ namespace _8033
                 }
             }
 
-            return hungryLions; // Return the fixed array (no trimming)
+            return hungryLions; // Return array (could include nulls after last hungy lion)
         }
     }
 
