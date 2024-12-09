@@ -49,7 +49,6 @@ namespace _8033
     {
         public Duck()
         {
-            this.food = base.food; // Ducks eat the same as a generic animal
         }
 
         // Override IsHungry
